@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/css/main.css">
+  <title>Choisissez Votre Constellation</title>
+</head>
+<body>
+  <main>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <div class="logo">
+          <img src="assets/background/Logo_MV.png" alt="logo">
+        </div>
+
+        <h2>Choisissez</h2>
+        <h1>Votre Constellation</h1>
+      </div>
+
+      <!-- Roue de Zodiaque -->
+      <div class="wheel-container"></div>
+
+      <!-- Images des constellations -->
+      <div class="horoscope-container">
+        <div class="horoscope-image">
+          <a href="#form">
+            <div class="constellation choosen-horoscope">
+            </div>
+          </a>
+
+          <div class="aries constellation" data-id="belier">
+            <img class="base" src="/assets/image-constellation/aries.png">
+            <img class="line" src="/assets/ligne-constellation/aries.png" alt="Bélier">
+          </div>
+
+          <div class="taurus constellation" data-id="taureau">
+            <img class="base" src="/assets/image-constellation/taurus.png">
+            <img class="line" src="/assets/ligne-constellation/taurus.png" alt="Taureau">
+          </div>
+
+          <div class="gemini constellation" data-id="gemeaux">
+            <img class="base" src="/assets/image-constellation/gemini.png">
+            <img class="line" src="/assets/ligne-constellation/gemini.png" alt="Gémeaux">
+          </div>
+
+          <div class="cancer constellation" data-id="cancer">
+            <img class="base" src="/assets/image-constellation/cancer.png">
+            <img class="line" src="/assets/ligne-constellation/cancer.png" alt="Cancer">
+          </div>
+
+          <div class="leo constellation" data-id="lion">
+            <img class="base" src="/assets/image-constellation/leo.png">
+            <img class="line" src="/assets/ligne-constellation/leo.png" alt="Lion">
+          </div>
+
+          <div class="virgo constellation" data-id="vierge">
+            <img class="base" src="/assets/image-constellation/virgo.png">
+            <img class="line" src="/assets/ligne-constellation/virgo.png" alt="Vierge">
+          </div>
+
+          <div class="libra constellation" data-id="balance">
+            <img class="base" src="/assets/image-constellation/libra.png">
+            <img class="line" src="/assets/ligne-constellation/libra.png" alt="Balance">
+          </div>
+
+          <div class="scorpio constellation" data-id="scorpion">
+            <img class="base" src="/assets/image-constellation/scorpio.png">
+            <img class="line" src="/assets/ligne-constellation/scorpio.png" alt="Scorpion">
+          </div>
+
+          <div class="sagittarius constellation" data-id="sagittaire">
+            <img class="base" src="/assets/image-constellation/sagittarius.png">
+            <img class="line" src="/assets/ligne-constellation/sagittarius.png" alt="Sagittaire">
+          </div>
+
+          <div class="capricorn constellation" data-id="capricorne">
+            <img class="base" src="/assets/image-constellation/capricorn.png">
+            <img class="line" src="/assets/ligne-constellation/capricorn.png" alt="Capricorne">
+          </div>
+
+          <div class="aquarius constellation" data-id="verseau">
+            <img class="base" src="/assets/image-constellation/aquarius.png">
+            <img class="line" src="/assets/ligne-constellation/aquarius.png" alt="Verseau">
+          </div>
+
+          <div class="pisces constellation" data-id="poissons">
+            <img class="base" src="/assets/image-constellation/pisces.png">
+            <img class="line" src="/assets/ligne-constellation/pisces.png" alt="Poissons">
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Menu d'Horoscope -->
+      <div class="select-container">
+        <select name="horoscope" id="horoscope">
+          <option value="Choisir" hidden>Choisir ...</option>
+          <option value="belier">Bélier</option>
+          <option value="taureau">Taureau</option>
+          <option value="gemeaux">Gémeaux</option>
+          <option value="cancer">Cancer</option>
+          <option value="lion">Lion</option>
+          <option value="vierge">Vierge</option>
+          <option value="balance">Balance</option>
+          <option value="scorpion">Scorpion</option>
+          <option value="sagittaire">Sagittaire</option>
+          <option value="capricorne">Capricorne</option>
+          <option value="verseau">Verseau</option>
+          <option value="poissons">Poissons</option>
+        </select>
+      </div>
+    </header>
+
+    <div class="left-cloud">
+      <img src="assets/background/left-cloud.png" alt="">
+    </div>
+    <div class="right-cloud">
+      <img src="assets/background/right-cloud.png" alt="">
+    </div>
+
+    <div class="form-container">
+      <form id="form">
+        <h1>Remplissez le formulaire ci-dessous</h1>
+        <div class="form-group">
+          <label for="prenom">Prénom*</label>
+          <input type="text" id="prenom" name="prenom" required placeholder="      Entrez votre prénom">
+        </div>
+        
+        <div class="form-group">
+          <label for="sexe">Sexe*</label>
+          <select name="sexe" id="sexe" required>
+            <option value="">Choisir ...</option>
+            <option value="homme">Homme</option>
+            <option value="femme">Femme</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
+  
+        <div class="form-group">
+          <label for="date">Date de naissance* :</label>
+          <div class="birth-date">
+            <input type="number" name="date" id="date" value="1">
+            <!-- input pour les mois en mode janvier - decembre -->
+            <select name="month" id="month">
+              <option value="">Mois</option>
+              <option value="janvier">Janvier</option>
+              <option value="fevrier">Février</option>
+              <option value="mars">Mars</option>
+              <option value="avril">Avril</option>
+              <option value="mai">Mai</option>
+              <option value="juin">Juin</option>
+              <option value="juillet">Juillet</option>
+              <option value="aout">Août</option>
+              <option value="septembre">Septembre</option>
+              <option value="octobre">Octobre</option>
+              <option value="novembre">Novembre</option>
+              <option value="decembre">Décembre</option>
+            </select>
+            <!-- input pour les années -->
+            <input type="number" name="year" id="year" value="1970">
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="email">Email*</label>
+          <input type="email" id="email" name="email" required placeholder="     Entrez votre adresse email">
+        </div>
+  
+        <small>En validant le formulaire, vous acceptez les <a href="#">CGV</a> et la <a href="#">politique de confidentialité</a></small>
+        <button type="submit" class="submit-button">ENVOYER</button>
+      </form>
+    </div>
+    
+    
+    <section class="form-background">
+      <div class="star"></div>
+      <div class="footer">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+      </div>
+    </section>
+
+  </main>
+  
+  <script src="/style/Js/main.js"></script>
+</body>
+</html>

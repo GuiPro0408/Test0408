@@ -1,0 +1,1130 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  background-image: url("../../assets/background/header-1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+header::before {
+  content: "";
+  background-image: url("../../assets/background/roue-constellation.png");
+  background-size: 62%;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 35px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+@media screen and (max-width: 1100px) {
+  header::before {
+    background-size: 90%;
+    background-position: center;
+  }
+}
+header::after {
+  content: "";
+  background-image: url("../../assets/background/Degradé.png");
+  position: absolute;
+  bottom: -240px;
+  left: 0;
+  width: 100%;
+  height: 465px;
+  z-index: 1;
+}
+header .header-content {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  padding-top: 60px;
+}
+header .header-content .logo {
+  margin-bottom: 75px;
+}
+header .header-content h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-family: "Libre Baskerville", serif;
+  letter-spacing: 1px;
+  color: #f38148;
+}
+header .header-content h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  font-family: "Libre Baskerville", serif;
+  margin-bottom: 10px;
+  letter-spacing: -2px;
+}
+header .horoscope-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+header .horoscope-container .horoscope-image {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+header .horoscope-container .horoscope-image .constellation {
+  position: absolute;
+}
+header .horoscope-container .horoscope-image .constellation img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 15;
+}
+header .horoscope-container .horoscope-image .constellation .line {
+  opacity: 0.3;
+  transition: all 0.3s ease-in-out;
+  filter: brightness(1);
+}
+header .horoscope-container .horoscope-image .constellation:hover .line {
+  opacity: 0.7;
+  filter: brightness(2);
+}
+header .horoscope-container .horoscope-image .choosen-horoscope {
+  position: absolute;
+  top: 50%;
+  left: 44%;
+  transform: translate(-50%, -50%) !important;
+  transition: all 0.3s ease-in-out;
+}
+header .horoscope-container .horoscope-image .choosen-horoscope img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+header .horoscope-container .horoscope-image .choosen-horoscope .base {
+  transform: scale(1.5);
+}
+header .horoscope-container .horoscope-image .choosen-horoscope .line {
+  opacity: 0.7;
+  filter: brightness(3);
+  transform: scale(1.5);
+}
+@media screen and (max-width: 1400px) and (min-width: 1000px) {
+  header .horoscope-container .horoscope-image .choosen-horoscope .base {
+    transform: scale(1.2);
+  }
+  header .horoscope-container .horoscope-image .choosen-horoscope .line {
+    transform: scale(1.2);
+  }
+}
+@media screen and (max-width: 1000px) and (min-width: 800px) {
+  header .horoscope-container .horoscope-image .choosen-horoscope {
+    top: 60%;
+    left: 35%;
+  }
+  header .horoscope-container .horoscope-image .choosen-horoscope .base {
+    transform: scale(1.1);
+  }
+  header .horoscope-container .horoscope-image .choosen-horoscope .line {
+    transform: scale(1.1);
+  }
+}
+header .horoscope-container .horoscope-image .aries {
+  position: absolute;
+  top: 19.5%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+}
+header .horoscope-container .horoscope-image .aries .base {
+  width: 165px;
+}
+header .horoscope-container .horoscope-image .aries .line {
+  position: relative;
+  top: 60px;
+  left: 65px;
+}
+@media screen and (max-width: 1400px) {
+  header .horoscope-container .horoscope-image .aries .base {
+    width: 135px;
+  }
+  header .horoscope-container .horoscope-image .aries .line {
+    width: 135px;
+    top: 40px;
+    left: 45px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  header .horoscope-container .horoscope-image .aries .base {
+    width: 105px;
+  }
+  header .horoscope-container .horoscope-image .aries .line {
+    width: 105px;
+    top: 20px;
+    left: 25px;
+  }
+}
+header .horoscope-container .horoscope-image .taurus {
+  position: absolute;
+  top: 16%;
+  left: 78.5%;
+  transform: translate(-50%, -50%);
+}
+header .horoscope-container .horoscope-image .taurus .base {
+  width: 250px;
+}
+header .horoscope-container .horoscope-image .taurus .line {
+  position: relative;
+  top: 120px;
+  left: 140px;
+}
+@media screen and (max-width: 1400px) {
+  header .horoscope-container .horoscope-image .taurus .base {
+    width: 220px;
+  }
+  header .horoscope-container .horoscope-image .taurus .line {
+    width: 220px;
+    top: 100px;
+    left: 120px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  header .horoscope-container .horoscope-image .taurus .base {
+    width: 190px;
+  }
+  header .horoscope-container .horoscope-image .taurus .line {
+    width: 190px;
+    top: 80px;
+    left: 100px;
+  }
+}
+header .horoscope-container .horoscope-image .pisces {
+  position: absolute;
+  top: 19%;
+  left: 30.6%;
+  transform: translate(-50%, -50%);
+}
+header .horoscope-container .horoscope-image .pisces .base {
+  width: 180px;
+}
+header .horoscope-container .horoscope-image .pisces .line {
+  position: relative;
+  top: 50px;
+  left: 80px;
+}
+@media screen and (max-width: 1400px) {
+  header .horoscope-container .horoscope-image .pisces .base {
+    width: 150px;
+  }
+  header .horoscope-container .horoscope-image .pisces .line {
+    width: 150px;
+    top: 30px;
+    left: 60px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  header .horoscope-container .horoscope-image .pisces .base {
+    width: 120px;
+  }
+  header .horoscope-container .horoscope-image .pisces .line {
+    width: 120px;
+    top: 10px;
+    left: 40px;
+  }
+}
+header .horoscope-container .horoscope-image .aquarius {
+  position: absolute;
+  top: 39%;
+  left: 17.7%;
+  transform: translate(-50%, -50%);
+}
+header .horoscope-container .horoscope-image .aquarius .base {
+  width: 235px;
+}
+header .horoscope-container .horoscope-image .aquarius .line {
+  position: relative;
+  top: 95px;
+  left: 77px;
+}
+@media screen and (max-width: 1400px) {
+  header .horoscope-container .horoscope-image .aquarius .base {
+    width: 205px;
+  }
+  header .horoscope-container .horoscope-image .aquarius .line {
+    width: 205px;
+    top: 75px;
+    left: 57px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  header .horoscope-container .horoscope-image .aquarius .base {
+    width: 175px;
+  }
+  header .horoscope-container .horoscope-image .aquarius .line {
+    width: 175px;
+    top: 55px;
+    left: 37px;
+  }
+}
+header .horoscope-container .horoscope-image .capricorn {
+  position: absolute;
+  top: 20%;
+  left: 12.4%;
+  transform: translate(-50%, -50%);
+}
+header .horoscope-container .horoscope-image .capricorn .base {
+  width: 220px;
+}
+header .horoscope-container .horoscope-image .capricorn .line {
+  position: relative;
+  top: 75px;
+  left: 85px;
+}
+@media screen and (max-width: 1400px) {
+  header .horoscope-container .horoscope-image .capricorn .base {
+    width: 190px;
+  }
+  header .horoscope-container .horoscope-image .capricorn .line {
+    width: 190px;
+    top: 55px;
+    left: 65px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  header .horoscope-container .horoscope-image .capricorn .base {
+    width: 160px;
+  }
+  header .horoscope-container .horoscope-image .capricorn .line {
+    width: 160px;
+    top: 35px;
+    left: 45px;
+  }
+}
+header .horoscope-container .horoscope-image .scorpio {
+  position: absolute;
+  top: 59%;
+  left: 9.6%;
+  transform: translate(-50%, -50%);
+}
+header .horoscope-container .horoscope-image .scorpio .base {
+  width: 230px;
+}
+header .horoscope-container .horoscope-image .scorpio .line {
+  position: relative;
+  top: 70px;
+  left: 85px;
+}
+@media screen and (max-width: 1400px) {
+  header .horoscope-container .horoscope-image .scorpio .base {
+    width: 200px;
+  }
+  header .horoscope-container .horoscope-image .scorpio .line {
+    width: 200px;
+    top: 50px;
+    left: 65px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  header .horoscope-container .horoscope-image .scorpio .base {
+    width: 170px;
+  }
+  header .horoscope-container .horoscope-image .scorpio .line {
+    width: 170px;
+    top: 30px;
+    left: 45px;
+  }
+}
+header .horoscope-container .horoscope-image .sagittarius {
+  position: absolute;
+  top: 58.5%;
+  left: 27.2%;
+  transform: translate(-50%, -50%);
+}
+header .horoscope-container .horoscope-image .sagittarius .base {
+  width: 210px;
+}
+header .horoscope-container .horoscope-image .sagittarius .line {
+  position: relative;
+  top: 125px;
+  left: 80px;
+}
+@media screen and (max-width: 1400px) {
+  header .horoscope-container .horoscope-image .sagittarius .base {
+    width: 180px;
+  }
+  header .horoscope-container .horoscope-image .sagittarius .line {
+    width: 180px;
+    top: 105px;
+    left: 60px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  header .horoscope-container .horoscope-image .sagittarius .base {
+    width: 150px;
+  }
+  header .horoscope-container .horoscope-image .sagittarius .line {
+    width: 150px;
+    top: 85px;
+    left: 40px;
+  }
+}
+header .horoscope-container .horoscope-image .libra {
+  position: absolute;
+  top: 85%;
+  left: 18%;
+  transform: translate(-50%, -50%);
+}
+header .horoscope-container .horoscope-image .libra .base {
+  width: 220px;
+}
+header .horoscope-container .horoscope-image .libra .line {
+  position: relative;
+  top: 87px;
+  left: 95px;
+}
+@media screen and (max-width: 1400px) {
+  header .horoscope-container .horoscope-image .libra .base {
+    width: 190px;
+  }
+  header .horoscope-container .horoscope-image .libra .line {
+    width: 190px;
+    top: 67px;
+    left: 75px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  header .horoscope-container .horoscope-image .libra .base {
+    width: 160px;
+  }
+  header .horoscope-container .horoscope-image .libra .line {
+    width: 160px;
+    top: 47px;
+    left: 55px;
+  }
+}
+header .horoscope-container .horoscope-image .gemini {
+  position: absolute;
+  top: 31.5%;
+  left: 91.2%;
+  transform: translate(-50%, -50%);
+}
+header .horoscope-container .horoscope-image .gemini .base {
+  width: 180px;
+}
+header .horoscope-container .horoscope-image .gemini .line {
+  position: relative;
+  top: 135px;
+  left: 120px;
+}
+@media screen and (max-width: 1400px) {
+  header .horoscope-container .horoscope-image .gemini .base {
+    width: 150px;
+  }
+  header .horoscope-container .horoscope-image .gemini .line {
+    width: 150px;
+    top: 115px;
+    left: 100px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  header .horoscope-container .horoscope-image .gemini .base {
+    width: 120px;
+  }
+  header .horoscope-container .horoscope-image .gemini .line {
+    width: 120px;
+    top: 95px;
+    left: 80px;
+  }
+}
+header .horoscope-container .horoscope-image .cancer {
+  position: absolute;
+  top: 51.5%;
+  left: 80.8%;
+  transform: translate(-50%, -50%);
+}
+header .horoscope-container .horoscope-image .cancer .base {
+  width: 190px;
+}
+header .horoscope-container .horoscope-image .cancer .line {
+  position: relative;
+  top: 113px;
+  left: 50px;
+}
+@media screen and (max-width: 1400px) {
+  header .horoscope-container .horoscope-image .cancer .base {
+    width: 160px;
+  }
+  header .horoscope-container .horoscope-image .cancer .line {
+    width: 160px;
+    top: 93px;
+    left: 30px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  header .horoscope-container .horoscope-image .cancer .base {
+    width: 130px;
+  }
+  header .horoscope-container .horoscope-image .cancer .line {
+    width: 130px;
+    top: 73px;
+    left: 10px;
+  }
+}
+header .horoscope-container .horoscope-image .leo {
+  position: absolute;
+  top: 77.5%;
+  left: 88%;
+  transform: translate(-50%, -50%);
+}
+header .horoscope-container .horoscope-image .leo .base {
+  width: 250px;
+}
+header .horoscope-container .horoscope-image .leo .line {
+  position: relative;
+  top: 50px;
+  left: 100px;
+}
+@media screen and (max-width: 1400px) {
+  header .horoscope-container .horoscope-image .leo .base {
+    width: 220px;
+  }
+  header .horoscope-container .horoscope-image .leo .line {
+    width: 220px;
+    top: 30px;
+    left: 80px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  header .horoscope-container .horoscope-image .leo .base {
+    width: 190px;
+  }
+  header .horoscope-container .horoscope-image .leo .line {
+    width: 190px;
+    top: 10px;
+    left: 60px;
+  }
+}
+header .horoscope-container .horoscope-image .virgo {
+  position: absolute;
+  top: 76.2%;
+  left: 69%;
+  transform: translate(-50%, -50%);
+}
+header .horoscope-container .horoscope-image .virgo .base {
+  width: 123px;
+}
+header .horoscope-container .horoscope-image .virgo .line {
+  position: relative;
+  top: 75px;
+  left: 40px;
+}
+@media screen and (max-width: 1400px) {
+  header .horoscope-container .horoscope-image .virgo .base {
+    width: 93px;
+  }
+  header .horoscope-container .horoscope-image .virgo .line {
+    width: 93px;
+    top: 55px;
+    left: 20px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  header .horoscope-container .horoscope-image .virgo .base {
+    width: 63px;
+  }
+  header .horoscope-container .horoscope-image .virgo .line {
+    width: 63px;
+    top: 35px;
+    left: 0px;
+  }
+}
+header .select-container {
+  z-index: 10;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -107px;
+  display: inline-block;
+  /* Vous pouvez ajuster la taille et la couleur de l'arrière-plan selon vos besoins */
+  padding: 10px;
+  border: 1px solid #fff;
+}
+header .select-container #horoscope {
+  color: #1e115d;
+  background-color: #fff !important;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 7px 65px;
+  font-size: 2rem;
+  font-family: "Libre Baskerville", serif;
+  letter-spacing: -2px;
+  background-image: url("/assets/background/Arrow.png");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  border: 0;
+  outline: 0;
+}
+
+.left-cloud {
+  position: absolute;
+  top: 800px;
+  left: 0;
+  width: 30%;
+  height: 275px;
+  z-index: 1;
+}
+.left-cloud img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.right-cloud {
+  position: absolute;
+  top: 800px;
+  right: 0;
+  width: 30%;
+  height: 275px;
+  z-index: 1;
+}
+.right-cloud img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media screen and (max-width: 800px) {
+  .constellation {
+    display: none;
+  }
+  .choosen-horoscope {
+    top: 53% !important;
+    left: 35% !important;
+    display: inline-block;
+  }
+  .choosen-horoscope .base {
+    transform: scale(1.5) !important;
+  }
+  .choosen-horoscope .line {
+    transform: scale(1.5) !important;
+  }
+  .left-cloud img, .right-cloud img {
+    width: 100%;
+  }
+  .right-cloud {
+    width: 100%;
+  }
+  .left-cloud {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .left-cloud, .right-cloud {
+    top: 80vh;
+  }
+  .header-content .logo img {
+    width: 150px;
+  }
+  .header-content h2 {
+    font-size: 1.7rem !important;
+  }
+  .header-content h1 {
+    font-size: 2.5rem !important;
+  }
+  .select-container #horoscope {
+    color: #1e115d;
+    background-color: #fff !important;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    padding: 7px 60px !important;
+    font-size: 1.3rem !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  header {
+    height: 90vh;
+  }
+  .left-cloud, .right-cloud {
+    top: 70vh;
+  }
+  .header-content .logo img {
+    width: 100px;
+  }
+  .header-content h2 {
+    font-size: 1.3rem !important;
+  }
+  .header-content h1 {
+    font-size: 1.7rem !important;
+  }
+  .choosen-horoscope {
+    top: 53% !important;
+    left: 20% !important;
+  }
+  .choosen-horoscope .base {
+    transform: scale(1) !important;
+  }
+  .choosen-horoscope .line {
+    transform: scale(1) !important;
+  }
+}
+.form-container {
+  width: 925px;
+  height: 820px;
+  background-image: url(/assets/forms/form.png);
+  position: absolute;
+  top: 102%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 22px 10px;
+  z-index: 10;
+}
+.form-container form {
+  background-image: url("../../assets/forms/form border.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 870px 720px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 75px 70px 30px 95px;
+  z-index: 55;
+}
+.form-container form h1 {
+  color: #f38148;
+  font-family: "Libre Baskerville", serif;
+  font-size: 2.1rem;
+  letter-spacing: 2px;
+  margin-left: 20px;
+  margin-bottom: 70px;
+}
+.form-container form .form-group {
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+  margin-bottom: 50px;
+}
+.form-container form .form-group label {
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+  margin-right: 20px;
+  white-space: nowrap;
+}
+.form-container form .form-group input {
+  color: #fff;
+  outline: 0;
+  border: 0;
+  position: relative;
+  background-color: transparent;
+  border-width: 0 0 2px 0;
+  border-style: solid;
+  -o-border-image: url("../../assets/forms/torn.png") 0 0 410 0 stretch;
+     border-image: url("../../assets/forms/torn.png") 0 0 410 0 stretch;
+  padding: 5px;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 25px;
+}
+.form-container form .form-group input::-moz-placeholder {
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+.form-container form .form-group input::placeholder {
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+.form-container form .form-group #sexe {
+  outline: 0;
+  background-color: transparent;
+  width: 300px;
+  text-align: center;
+  font-size: 1.5rem;
+  -o-border-image: url("../../assets/forms/torn.png") 0 0 410 0 stretch;
+     border-image: url("../../assets/forms/torn.png") 0 0 410 0 stretch;
+  padding-bottom: 5px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("/assets/forms/arrow-down.png");
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: right 35px center;
+  color: #fff;
+}
+.form-container form .form-group #sexe option {
+  color: #000;
+}
+.form-container form .form-group .birth-date {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.form-container form .form-group .birth-date #date {
+  width: 130px;
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+  margin-top: 0;
+}
+.form-container form .form-group .birth-date #month {
+  width: 170px;
+  font-size: 25px;
+  outline: 0;
+  background-color: transparent;
+  -o-border-image: url("../../assets/forms/torn.png") 0 0 410 0 stretch;
+     border-image: url("../../assets/forms/torn.png") 0 0 410 0 stretch;
+  color: #fff;
+  text-align: center;
+  margin-top: 0;
+}
+.form-container form .form-group .birth-date #month option {
+  color: #000;
+}
+.form-container form .form-group .birth-date #year {
+  width: 170px;
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+  margin-top: 0;
+}
+.form-container form #email {
+  margin-top: 0;
+}
+.form-container form small {
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.2rem;
+  margin-left: 20px;
+}
+.form-container form small a {
+  color: #f38148;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+.form-container form .submit-button {
+  font-weight: bold;
+  font-size: 35px;
+  margin: 70px auto 0 auto;
+  width: 300px;
+  height: 80px;
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+  background-image: url(/assets/forms/cta.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.3s ease-in-out;
+  background-size: contain;
+}
+.form-container form .submit-button:hover {
+  cursor: pointer;
+  filter: brightness(1.1);
+  filter: drop-shadow(0 0 0.15rem #f38148);
+}
+
+.form-background {
+  max-width: 100%;
+  height: 1000px;
+  background: url("../../assets/background/footer-bk.png") no-repeat;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 0;
+}
+.form-background .star {
+  content: "";
+  background-image: url("../../assets/background/poussier-etoile-footer.png");
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -9;
+}
+
+.footer {
+  z-index: 15;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  margin-bottom: 50px;
+}
+.footer p {
+  font-family: "Libre Baskerville", serif;
+  line-height: 18px;
+  font-size: 14px;
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .form-container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 800px) and (min-width: 550px) {
+  .form-container {
+    width: 95%;
+  }
+  .form-container form {
+    background-size: 95% 95%;
+    padding: 80px 60px 30px 80px;
+  }
+  .form-container form h1 {
+    font-size: 1.6rem;
+    margin-bottom: 60px;
+  }
+  .form-container form .form-group {
+    margin-bottom: 40px;
+  }
+  .form-container form .form-group label {
+    font-size: 1.2rem;
+    margin-right: 15px;
+  }
+  .form-container form .form-group input {
+    font-size: 1.2rem;
+  }
+  .form-container form .form-group input::-moz-placeholder {
+    font-size: 1.2rem;
+  }
+  .form-container form .form-group input::placeholder {
+    font-size: 1.2rem;
+  }
+  .form-container form .form-group #sexe {
+    width: 250px;
+    font-size: 1.2rem;
+    background-size: 40px;
+    background-position: right 30px center;
+  }
+  .form-container form .form-group .birth-date #date {
+    width: 30%;
+    font-size: 18px;
+  }
+  .form-container form .form-group .birth-date #month {
+    width: 30%;
+    font-size: 18px;
+  }
+  .form-container form .form-group .birth-date #year {
+    width: 30%;
+    font-size: 18px;
+  }
+  .form-container form .form-group .birth-date #email {
+    font-size: 18px;
+  }
+  .form-container form small {
+    font-size: 1.1rem;
+  }
+  .form-container form small a {
+    font-size: 1.1rem;
+  }
+  .form-container form .submit-button {
+    font-weight: bold;
+    font-size: 25px;
+    margin: 70px auto 0 auto;
+    width: 200px;
+    height: 50px;
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    background-image: url(/assets/forms/cta.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.3s ease-in-out;
+  }
+  .footer {
+    width: 80%;
+  }
+  .footer p {
+    line-height: 18px;
+    font-size: 12px;
+    color: #fff;
+  }
+}
+@media screen and (max-width: 550px) and (min-width: 450px) {
+  .form-container {
+    width: 95%;
+    height: 700px;
+  }
+  .form-container form {
+    background-size: 95% 95%;
+    padding: 80px 60px 30px 80px;
+  }
+  .form-container form h1 {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+  }
+  .form-container form .form-group {
+    margin-bottom: 40px;
+  }
+  .form-container form .form-group label {
+    font-size: 0.9rem;
+    margin-right: 15px;
+    white-space: wrap;
+  }
+  .form-container form .form-group input {
+    margin-top: 0;
+    font-size: 1rem;
+  }
+  .form-container form .form-group input::-moz-placeholder {
+    font-size: 1rem;
+  }
+  .form-container form .form-group input::placeholder {
+    font-size: 1rem;
+  }
+  .form-container form .form-group #sexe {
+    width: 100%;
+    font-size: 1rem;
+    background-size: 40px;
+    background-position: right 30px center;
+  }
+  .form-container form .form-group .birth-date #date {
+    width: 33%;
+    font-size: 15px;
+  }
+  .form-container form .form-group .birth-date #month {
+    width: 33%;
+    font-size: 15px;
+  }
+  .form-container form .form-group .birth-date #year {
+    width: 33%;
+    font-size: 15px;
+  }
+  .form-container form .form-group .birth-date #email {
+    font-size: 15px;
+  }
+  .form-container form small {
+    font-size: 0.8rem;
+  }
+  .form-container form small a {
+    font-size: 0.8rem;
+  }
+  .form-container form .submit-button {
+    width: 200px;
+    height: 50px;
+    font-size: 1.1rem;
+    margin-top: 30px;
+  }
+  .footer {
+    width: 80%;
+  }
+  .footer p {
+    line-height: 18px;
+    font-size: 12px;
+    color: #fff;
+  }
+}
+@media screen and (max-width: 450px) {
+  .form-container {
+    width: 95%;
+    height: 700px;
+    top: 100vh;
+  }
+  .form-container form {
+    background-size: 95% 95%;
+    padding: 50px 30px;
+  }
+  .form-container form h1 {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+  .form-container form .form-group {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  .form-container form .form-group label {
+    font-size: 0.9rem;
+    margin-right: 15px;
+    white-space: wrap;
+  }
+  .form-container form .form-group input {
+    margin-top: 0;
+    font-size: 1rem;
+  }
+  .form-container form .form-group input::-moz-placeholder {
+    font-size: 1rem;
+  }
+  .form-container form .form-group input::placeholder {
+    font-size: 1rem;
+  }
+  .form-container form .form-group #sexe {
+    width: 100%;
+    font-size: 1rem;
+    background-size: 40px;
+    background-position: right 30px center;
+  }
+  .form-container form .form-group .birth-date #date {
+    width: 33%;
+    font-size: 15px;
+  }
+  .form-container form .form-group .birth-date #month {
+    width: 33%;
+    font-size: 15px;
+  }
+  .form-container form .form-group .birth-date #year {
+    width: 33%;
+    font-size: 15px;
+  }
+  .form-container form .form-group .birth-date #email {
+    font-size: 15px;
+  }
+  .form-container form small {
+    font-size: 0.8rem;
+  }
+  .form-container form small a {
+    font-size: 0.8rem;
+  }
+  .form-container form .submit-button {
+    width: 200px;
+    height: 50px;
+    font-size: 1.1rem;
+    margin-top: 30px;
+  }
+  .form-background {
+    height: 900px;
+  }
+  .footer {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .footer p {
+    line-height: 18px;
+    font-size: 10px;
+    color: #fff;
+  }
+}/*# sourceMappingURL=main.css.map */

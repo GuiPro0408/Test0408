@@ -1,0 +1,415 @@
+// HEADER
+@import 'variables';
+@import 'fonts';
+
+@mixin horoscope-sign($width, $top, $left, $line-top, $line-left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  transform: translate(-50%, -50%);
+
+  .base {
+    width: $width;
+  }
+
+  .line {
+    position: relative;
+    top: $line-top;
+    left: $line-left;
+  }
+
+  @media screen and (max-width: 1400px) {
+    .base {
+      width: $width - 30px;
+    }
+
+    .line {
+      width: $width - 30px;
+      top: $line-top - 20px;
+      left: $line-left - 20px;
+    }
+  }
+
+  @media screen and (max-width: 1100px) {
+    .base {
+      width: $width - 60px;
+    }
+
+    .line {
+      width: $width - 60px;
+      top: $line-top - 40px;
+      left: $line-left - 40px;
+    }
+  }
+}
+
+header {
+  background-image: url("../../assets/background/header-1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+
+  // Horoscope wheel overlay 
+  &::before {
+    content: "";
+    background-image: url("../../assets/background/roue-constellation.png");
+    background-size: 62%;
+    background-position: top;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 35px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    @media screen and (max-width: 1100px) {
+      background-size: 90%;
+      background-position: center;
+    }
+  }
+
+  &::after {
+    content: "";
+    background-image: url("../../assets/background/Degradé.png");
+    position: absolute;
+    bottom: -240px;
+    left: 0;
+    width: 100%;
+    height: 465px;
+    z-index: 1;
+  }
+
+  .header-content {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    padding-top: 60px;
+
+    .logo {
+      margin-bottom: 75px;
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      font-family: "Libre Baskerville", serif;
+      letter-spacing: 1px;
+      color: #f38148;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 400;
+      font-family: "Libre Baskerville", serif;
+      margin-bottom: 10px;
+      letter-spacing: -2px;
+    }
+  }
+
+  .horoscope-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+
+    .horoscope-image {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+
+      .constellation {
+        position: absolute;
+  
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 15;
+        }
+  
+        .line {
+          opacity: 0.3;
+          transition: all 0.3s ease-in-out;
+          filter: brightness(1);
+        }
+
+        &:hover .line {
+          opacity: 0.7;
+          filter: brightness(2);
+        }
+      }
+
+      .choosen-horoscope {
+        position: absolute;
+        top: 50%;
+        left: 44%;
+        transform: translate(-50%, -50%)!important;
+        transition: all 0.3s ease-in-out;
+
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        .base {
+          transform: scale(1.5);
+        }
+
+        .line {
+          opacity: 0.7;
+          filter: brightness(3);
+          transform: scale(1.5);
+        }
+
+        @media screen and (max-width: 1400px) and (min-width: 1000px){
+          .base {
+            transform: scale(1.2);
+          }
+
+          .line {
+            transform: scale(1.2);
+          }
+        }
+
+        @media screen and (max-width: 1000px) and (min-width: 800px) {
+          top: 60%;
+          left: 35%;
+
+          .base {
+            transform: scale(1.1);
+          }
+
+          .line {
+            transform: scale(1.1);
+          }
+        }
+      }
+  
+      .aries {
+        @include horoscope-sign(165px, 19.5%, 65%, 60px, 65px);
+      }
+
+      .taurus {
+        @include horoscope-sign(250px, 16%, 78.5%, 120px, 140px);
+      }
+
+      .pisces {
+        @include horoscope-sign(180px, 19%, 30.6%, 50px, 80px);
+      }
+      
+      .aquarius {
+        @include horoscope-sign(235px, 39%, 17.7%, 95px, 77px);
+      }
+      
+      .capricorn {
+        @include horoscope-sign(220px, 20%, 12.4%, 75px, 85px);
+      }
+      
+      .scorpio {
+        @include horoscope-sign(230px, 59%, 9.6%, 70px, 85px);
+      }
+      
+      .sagittarius {
+        @include horoscope-sign(210px, 58.5%, 27.2%, 125px, 80px);
+      }
+      
+      .libra {
+        @include horoscope-sign(220px, 85%, 18%, 87px, 95px);
+      }
+      
+      .gemini {
+        @include horoscope-sign(180px, 31.5%, 91.2%, 135px, 120px);
+      }
+      
+      .cancer {
+        @include horoscope-sign(190px, 51.5%, 80.8%, 113px, 50px);
+      }
+      
+      .leo {
+        @include horoscope-sign(250px, 77.5%, 88%, 50px, 100px);
+      }
+      
+      .virgo {
+        @include horoscope-sign(123px, 76.2%, 69%, 75px, 40px);
+      }
+      
+    }
+  }
+
+  .select-container {
+    z-index: 10;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -107px;
+    display: inline-block;
+    /* Vous pouvez ajuster la taille et la couleur de l'arrière-plan selon vos besoins */
+    padding: 10px;
+    border: 1px solid #fff;
+
+    #horoscope {
+      color: #1e115d;
+      background-color: #fff!important;
+      appearance: none;
+      padding: 7px 65px;
+      font-size: 2rem;
+      font-family: "Libre Baskerville", serif;
+      letter-spacing: -2px;
+      background-image: url("/assets/background/Arrow.png");
+      background-repeat: no-repeat;
+      background-position: right 15px center;
+      border: 0;
+      outline: 0;
+    }  
+  }
+  
+}
+
+// TRANSITION
+.left-cloud {
+  position: absolute;
+  top: 800px;
+  left: 0;
+  width: 30%;
+  height: 275px;
+  z-index: 1;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.right-cloud {
+  position: absolute;
+  top: 800px;
+  right: 0;
+  width: 30%;
+  height: 275px;
+  z-index: 1;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .constellation {
+    display: none;
+  }
+
+  .choosen-horoscope {
+    top: 53%!important;
+    left: 35%!important;
+    display: inline-block;
+
+    .base {
+      transform: scale(1.5)!important;
+    }
+
+    .line {
+      transform: scale(1.5)!important;
+    }
+  }
+
+  .left-cloud img, .right-cloud img {
+    width: 100%;
+  }
+
+  .right-cloud {
+    width: 100%;
+  }
+
+  .left-cloud {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .left-cloud, .right-cloud {
+    top: 80vh;
+  }
+
+  .header-content {
+    .logo {
+      img {
+        width: 150px;
+      }
+    }
+
+    h2 {
+      font-size: 1.7rem!important;
+    }
+
+    h1 {
+      font-size: 2.5rem!important;
+    }
+  }
+
+  .select-container {
+    #horoscope {
+      color: #1e115d;
+      background-color: #fff!important;
+      appearance: none;
+      padding: 7px 60px!important;
+      font-size: 1.3rem!important;    
+    }  
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header {
+    height: 90vh;
+  }
+
+  .left-cloud, .right-cloud {
+    top: 70vh;
+  }
+  
+  .header-content {
+    .logo {
+      img {
+        width: 100px;
+      }
+    }
+
+    h2 {
+      font-size: 1.3rem!important;
+    }
+
+    h1 {
+      font-size: 1.7rem!important;
+    }
+  }
+
+  .choosen-horoscope {
+    top: 53%!important;
+    left: 20%!important;
+
+    .base {
+      transform: scale(1)!important;
+    }
+
+    .line {
+      transform: scale(1)!important;
+    }
+  }
+}
