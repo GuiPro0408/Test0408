@@ -584,7 +584,7 @@ header .select-container #horoscope {
   font-size: 2rem;
   font-family: "Libre Baskerville", serif;
   letter-spacing: -2px;
-  background-image: url("/assets/background/Arrow.png");
+  background-image: url("../../assets/background/Arrow.png");
   background-repeat: no-repeat;
   background-position: right 15px center;
   border: 0;
@@ -699,7 +699,7 @@ header .select-container #horoscope {
 .form-container {
   width: 925px;
   height: 820px;
-  background-image: url(/assets/forms/form.png);
+  background-image: url("../../assets/forms/form.png");
   position: absolute;
   top: 102%;
   left: 50%;
@@ -779,7 +779,7 @@ header .select-container #horoscope {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background-image: url("/assets/forms/arrow-down.png");
+  background-image: url("../../assets/forms/arrow-down.png");
   background-size: 50px;
   background-repeat: no-repeat;
   background-position: right 35px center;
@@ -845,7 +845,7 @@ header .select-container #horoscope {
   outline: 0;
   border: 0;
   background-color: transparent;
-  background-image: url(/assets/forms/cta.png);
+  background-image: url("../../assets/forms/cta.png");
   background-repeat: no-repeat;
   background-position: center;
   transition: all 0.3s ease-in-out;
@@ -962,7 +962,7 @@ header .select-container #horoscope {
     outline: 0;
     border: 0;
     background-color: transparent;
-    background-image: url(/assets/forms/cta.png);
+    background-image: url("../../assets/forms/cta.png");
     background-repeat: no-repeat;
     background-position: center;
     transition: all 0.3s ease-in-out;

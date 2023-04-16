@@ -4,7 +4,7 @@
 .form-container {
   width: 925px;
   height: 820px;
-  background-image: url(/assets/forms/form.png);
+  background-image: url("../../assets/forms/form.png");
   position: absolute;
   top: 102%;
   left: 50%;
@@ -79,7 +79,7 @@
         border-image: url("../../assets/forms/torn.png") 0 0 410  0 stretch;
         padding-bottom:5px;
         appearance: none;
-        background-image: url("/assets/forms/arrow-down.png");
+        background-image: url("../../assets/forms/arrow-down.png");
         background-size: 50px;
         background-repeat: no-repeat;
         background-position: right 35px center;
@@ -155,7 +155,7 @@
       outline: 0;
       border: 0;
       background-color: transparent;
-      background-image: url(/assets/forms/cta.png);
+      background-image: url("../../assets/forms/cta.png");
       background-repeat: no-repeat;
       background-position: center;
       transition: all 0.3s ease-in-out;
@@ -292,7 +292,7 @@
         outline: 0;
         border: 0;
         background-color: transparent;
-        background-image: url(/assets/forms/cta.png);
+        background-image: url("../../assets/forms/cta.png");
         background-repeat: no-repeat;
         background-position: center;
         transition: all 0.3s ease-in-out;
