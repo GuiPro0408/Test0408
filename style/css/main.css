@@ -669,7 +669,7 @@ header .select-container #horoscope {
     font-size: 1.3rem !important;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 430px) {
   header {
     height: 90vh;
   }
